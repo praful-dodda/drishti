@@ -1,31 +1,22 @@
-# Drishti — Landing Page
+# Climate Drishti
 
-## Deploy to GitHub Pages with custom domain
+Climate Drishti is a single-page landing site for a climate risk scoring product. It introduces the product, explains the data fusion approach, highlights use cases, and gives visitors a simple way to contact Praful directly.
 
-1. Create a public repo on GitHub named `drishti`
-2. Push these files to the `main` branch
-3. Go to Settings → Pages → Source → select `main` branch, root folder
-4. Under "Custom domain", enter `climate-drishti.store` and save
-5. Check "Enforce HTTPS" once the DNS check passes
+## What’s inside
 
-## DNS setup (in your domain registrar)
+- `index.html` — the full landing page, including layout, styles, and behavior
+- `praful-founder.jpg` — founder photo used in the About section
+- `CNAME` — GitHub Pages domain configuration
+- `.nojekyll` — disables Jekyll processing on GitHub Pages
 
-Add these records where you bought the domain:
+## Local preview
 
-| Type  | Host/Name | Value                          |
-|-------|-----------|--------------------------------|
-| A     | @         | 185.199.108.153                |
-| A     | @         | 185.199.109.153                |
-| A     | @         | 185.199.110.153                |
-| A     | @         | 185.199.111.153                |
-| CNAME | www       | YOURUSERNAME.github.io         |
+Open `index.html` in a browser, or serve the folder with any static file server if you want a local URL.
 
-Replace YOURUSERNAME with your GitHub username.
+## Deploying
 
-DNS propagation usually takes 5–30 minutes. Once it's done, your site will be live at https://climate-drishti.store
+This site is designed for GitHub Pages. Push the repository to GitHub, enable Pages for the `main` branch, and keep the `CNAME` file in place if you want to use the configured domain.
 
-## Files
+## Contact
 
-- `index.html` — Full landing page (single file, no build step)
-- `CNAME` — Tells GitHub Pages your custom domain
-- `.nojekyll` — Skips Jekyll processing
+Email: praful.unc@gmail.com
