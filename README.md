@@ -1,29 +1,31 @@
 # Drishti — Landing Page
 
-## Before you deploy
+## Deploy to GitHub Pages with custom domain
 
-1. **Find-and-replace** `YOURDOMAIN.com` with your actual domain (e.g., `drishtirisk.com`) in:
-   - `index.html` (email addresses — there are 4 occurrences of `praful@YOURDOMAIN.com`)
-   - `CNAME` (replace with just the bare domain, e.g., `drishtirisk.com`)
-
-2. **Add your headshot** — Replace the "Your photo here" placeholder in the founder section with an actual `<img>` tag.
-
-## Deploy to GitHub Pages
-
-1. Create a new repo on GitHub (e.g., `drishti-site`)
+1. Create a public repo on GitHub named `drishti`
 2. Push these files to the `main` branch
-3. Go to **Settings → Pages → Source** → select `main` branch, root folder
-4. In your domain registrar (Namecheap, Cloudflare, etc.), add these DNS records:
-   - `A` record pointing to `185.199.108.153`
-   - `A` record pointing to `185.199.109.153`
-   - `A` record pointing to `185.199.110.153`
-   - `A` record pointing to `185.199.111.153`
-   - `CNAME` record: `www` → `YOURUSERNAME.github.io`
-5. Back in GitHub Pages settings, enter your custom domain and check "Enforce HTTPS"
-6. Wait 5–15 minutes for DNS propagation
+3. Go to Settings → Pages → Source → select `main` branch, root folder
+4. Under "Custom domain", enter `climate-drishti.store` and save
+5. Check "Enforce HTTPS" once the DNS check passes
+
+## DNS setup (in your domain registrar)
+
+Add these records where you bought the domain:
+
+| Type  | Host/Name | Value                          |
+|-------|-----------|--------------------------------|
+| A     | @         | 185.199.108.153                |
+| A     | @         | 185.199.109.153                |
+| A     | @         | 185.199.110.153                |
+| A     | @         | 185.199.111.153                |
+| CNAME | www       | YOURUSERNAME.github.io         |
+
+Replace YOURUSERNAME with your GitHub username.
+
+DNS propagation usually takes 5–30 minutes. Once it's done, your site will be live at https://climate-drishti.store
 
 ## Files
 
-- `index.html` — The entire landing page (single file, no build step)
+- `index.html` — Full landing page (single file, no build step)
 - `CNAME` — Tells GitHub Pages your custom domain
-- `.nojekyll` — Skips Jekyll processing (faster deploys)
+- `.nojekyll` — Skips Jekyll processing
